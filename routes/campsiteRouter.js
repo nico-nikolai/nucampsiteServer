@@ -5,8 +5,6 @@ const cors = require('./cors');
 
 const campsiteRouter = express.Router();
 
-// campsiteRouter.use(bodyParser.json()); where did this come from?
-
 campsiteRouter.route('/')
 .options(cors.corsWithOptions, (req, res) => res.sendStatus(200))
 .get(cors.cors, (req, res, next) => {
